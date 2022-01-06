@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Requerimiento.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="shortcut icon" href="/Public/img/favicon.ico" type="image/x-icon">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/Public/css/styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <header class="container-fluid px-0 mb-3">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/Vistas/index.aspx">Inicio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="ddProveedor" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proveedor
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="ddProveedor">
+                                    <li><a class="dropdown-item" href="/Vistas/Proveedor/CrearProveedor.aspx">Crear</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="ddProducto" role="button" data-bs-toggle="dropdown" aria-expanded="false">Producto
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="ddProducto">
+                                    <li><a class="dropdown-item" href="/Vistas/Producto/CrearProducto.aspx">Crear</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="ddOrden" role="button" data-bs-toggle="dropdown" aria-expanded="false">Orden
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="ddOrden">
+                                    <li><a class="dropdown-item" href="/Vistas/Orden/ListarPendientes.aspx">Listar Pendientes</a></li>
+                                    <li><a class="dropdown-item" href="/Vistas/Orden/CrearOrden.aspx">Crear</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="ddInformes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Informes
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="ddInformes">
+                                    <li><a class="dropdown-item" href="/Vistas/Informes/InformeOrden.aspx">Orden</a></li>
+                                    <li><a class="dropdown-item" href="/Vistas/Informes/InformeProductos.aspx">Producto</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    </header>
+
+    <main class="container">
+        <asp:ContentPlaceHolder ID="contenido" runat="server">
+        </asp:ContentPlaceHolder>
+    </main>
+
+    <footer class="container-fluid bg-dark text-white">
+        <p class="py-2 text-center mb-0">&copy; Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/Public/js/jquery.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Public/js/sweetalert2.js"></script>
+    <script src="/Public/js/jquery.validate.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="scripts" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
